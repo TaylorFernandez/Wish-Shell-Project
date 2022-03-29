@@ -6,9 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/built-in.h
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.c
+string.h
+-
+unistd.h
+-
+stdlib.h
+-
+built-in.h
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.h
+stdio.h
+-
+wordFormatting.h
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.h
 
-/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/main.c
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.h
+
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/main.c
 stdio.h
 -
 string.h
@@ -22,11 +36,21 @@ signal.h
 sys/fcntl.h
 -
 built-in.h
-/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/built-in.h
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.h
 wordFormatting.h
-/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/wordFormatting.h
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.h
 pthread.h
 -
 
-/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/wordFormatting.h
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.c
+string.h
+-
+stdlib.h
+-
+wordFormatting.h
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.h
+stdio.h
+-
+
+/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.h
 

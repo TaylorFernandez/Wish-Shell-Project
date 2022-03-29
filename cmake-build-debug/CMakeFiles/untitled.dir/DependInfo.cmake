@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/built-in.c" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles/untitled.dir/built-in.c.o"
-  "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/main.c" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o"
-  "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/wordFormatting.c" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles/untitled.dir/wordFormatting.c.o"
+  "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.c" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles/untitled.dir/built-in.c.o"
+  "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/main.c" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o"
+  "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.c" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles/untitled.dir/wordFormatting.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

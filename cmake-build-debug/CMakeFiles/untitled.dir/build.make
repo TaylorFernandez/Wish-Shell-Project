@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled"
+CMAKE_SOURCE_DIR = "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/untitled.dir/depend.make
@@ -68,42 +68,42 @@ include CMakeFiles/untitled.dir/flags.make
 
 CMakeFiles/untitled.dir/main.c.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/untitled.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/main.c.o -c "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/untitled.dir/main.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/main.c.o -c "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/main.c"
 
 CMakeFiles/untitled.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/main.c" > CMakeFiles/untitled.dir/main.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/main.c" > CMakeFiles/untitled.dir/main.c.i
 
 CMakeFiles/untitled.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/main.c" -o CMakeFiles/untitled.dir/main.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/main.c" -o CMakeFiles/untitled.dir/main.c.s
 
 CMakeFiles/untitled.dir/wordFormatting.c.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/wordFormatting.c.o: ../wordFormatting.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/untitled.dir/wordFormatting.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/wordFormatting.c.o -c "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/wordFormatting.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/untitled.dir/wordFormatting.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/wordFormatting.c.o -c "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.c"
 
 CMakeFiles/untitled.dir/wordFormatting.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/wordFormatting.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/wordFormatting.c" > CMakeFiles/untitled.dir/wordFormatting.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.c" > CMakeFiles/untitled.dir/wordFormatting.c.i
 
 CMakeFiles/untitled.dir/wordFormatting.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/wordFormatting.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/wordFormatting.c" -o CMakeFiles/untitled.dir/wordFormatting.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/wordFormatting.c" -o CMakeFiles/untitled.dir/wordFormatting.c.s
 
 CMakeFiles/untitled.dir/built-in.c.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/built-in.c.o: ../built-in.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/untitled.dir/built-in.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/built-in.c.o -c "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/built-in.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/untitled.dir/built-in.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/built-in.c.o -c "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.c"
 
 CMakeFiles/untitled.dir/built-in.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/built-in.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/built-in.c" > CMakeFiles/untitled.dir/built-in.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.c" > CMakeFiles/untitled.dir/built-in.c.i
 
 CMakeFiles/untitled.dir/built-in.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/built-in.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/built-in.c" -o CMakeFiles/untitled.dir/built-in.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/built-in.c" -o CMakeFiles/untitled.dir/built-in.c.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
@@ -119,7 +119,7 @@ untitled: CMakeFiles/untitled.dir/wordFormatting.c.o
 untitled: CMakeFiles/untitled.dir/built-in.c.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: CMakeFiles/untitled.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable untitled"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable untitled"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -131,6 +131,6 @@ CMakeFiles/untitled.dir/clean:
 .PHONY : CMakeFiles/untitled.dir/clean
 
 CMakeFiles/untitled.dir/depend:
-	cd "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Networking/untitled/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug" "/Users/taylorfernandez/Desktop/Spring 2022/Operating Systems/Labs/Lab 2/Ostep Wish Shell/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/untitled.dir/depend
 

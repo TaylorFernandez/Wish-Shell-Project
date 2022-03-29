@@ -33,6 +33,12 @@ void cd(char *buffer){
     chdir(buffer);
 }
 
+/**
+ * contains checks to see if an array contains a certain string
+ * @param str - list of strings split by parse()
+ * @param letter - string that will be checked in str
+ * @return - TRUE if letter is found in string: FALSE if letter is not found in string
+ */
 int contains(char **str, char *letter){
     int len = numWords(str);
 
@@ -43,7 +49,13 @@ int contains(char **str, char *letter){
     }
     return FALSE;
 }
-
+/**
+ * ContainsChar is similar to contains() but checks a string not parsed by parse()
+ * to check if a letter is in a string.
+ * @param str - string
+ * @param letter - letter to be checked for
+ * @return - TRUE if letter is found in string: FALSE if letter is not found in string
+ */
 int containsChar(char *str, char letter){
     int len = strlen(str);
 
@@ -55,6 +67,12 @@ int containsChar(char *str, char letter){
     return FALSE;
 }
 
+/**
+ * Where() finds the first occurance of a string in a list of strings
+ * @param str - list of strings
+ * @param letter - string to be found
+ * @return first occurance of the string in the list: 0-indexed
+ */
 int where(char **str, char *letter){
     int len = numWords(str);
 
@@ -66,6 +84,12 @@ int where(char **str, char *letter){
     return -1;
 }
 
+/**
+ * Where() finds the first occurance of a letter in a string
+ * @param str - String
+ * @param letter - letter to be found
+ * @return first occurance of the letter in the string: 0-indexed
+ */
 int whereChar(char *str, char letter){
     int len = strlen(str);
 
@@ -77,6 +101,12 @@ int whereChar(char *str, char letter){
     return -1;
 }
 
+/**
+ * Finds the number of occurances of a word in a list of words
+ * @param array - list of words
+ * @param word - word to be found
+ * @return number of times word is found in array
+ */
 int numWordsInArray(char **array, char *word){
     int len = numWords(array);
     int count = 0;

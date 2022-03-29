@@ -30,6 +30,13 @@ char* parse(char *buffer){
     return array;
 }
 
+/**
+ * parseNew is a version of parse that is able to take in and split
+ * a string based on a list of delimiters input by wish.
+ * @param str - string to be split
+ * @param delim - list of characters to separate string by
+ * @return - pointer to a list containing the newly formatted list
+ */
 char *parseNew(char *str, char *delim){
     int i = 0;
     char *first = strtok(str, delim);

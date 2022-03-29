@@ -22,29 +22,32 @@
  * @param argv - list of the arguments
  */
 
-typedef struct{
-    char **args;
-    int num;
-    int bool;
-} holder;
-
+/**
+ * Global variables used through out main and doCommands functions
+ */
 char path[10][100] = {"/bin"};
 char **array;
 void doCommands(char **, int, int, char *);
 void *threadExecute(void *);
 int parentPID;
 
+
+/**
+ * Main Loop of the program. When used in input mode, the shell will continue to collect and parse user
+ * input and perform operations until the user inputs "exit." The shell will only exit if the input is "exit"
+ * with no other Arguments. When in batch mode, the program will read in lines of a batch file, parse the input,
+ * and perform the necessary operations until the end of the file is reached.
+ * @param argc - number of arguments
+ * @param argv - pointer to a list of arguments
+ * @return execution is sucessful. If wish encounters an error throughout execution, and error will be
+ *          printed to Standard Error and will return 1. Errors encountered during input mode will
+ *          simply print an error to Standard Error and continue gathering user input.
+ */
 int main(int argc, char* argv[]) {
     int isExiting = FALSE;
     char inputLine[100] = "\0";
     unsigned long lenBuffer = 0;
     char *buffer = NULL;
-
-    /**
-     * PATH: create a list that holds a path. Use a while loop until null to store the paths in an array.
-     * When PATH is called again, clear the list and overwrite it. When path is called with no parameters,
-     * (index PATH starting at 1
-     */
 
     /**
      * If there are more than 1 arguments, the program will attempt to
@@ -103,8 +106,9 @@ int main(int argc, char* argv[]) {
             int counting = numWords(array);
             /**
              * this portion of the function handles user commands
-             * by looking at the first word in the list and
-             * checking if its a valid command
+             * by looking at the first word and checking if the user
+             * wants to exit. If not, wish will send parsed commands
+             * to doCommands()
              */
             if( strcmp(array[0], "exit") == 0){
                 if(counting != 1){
@@ -134,11 +138,13 @@ void doCommands(char **array, int numberOfWords, int isExec, char *input) {
     char destination[100];
     int parallel = FALSE;
 
-    //Need To Do: Parallel Commands
-    //Splitting strings working: Need to fix seconds command not splitting correctly without proper spacing
-    //Ex: ls&echo test
 
 
+    /**
+     * Parallelization: Handles cases where the user inputs parallel
+     * commands separated by "&" without a space between commands
+     * EX: "ls&echo test
+     */
     if(containsChar(array[0], '&') == 1 && contains(array, "&") != TRUE){
         char and[3] = "&";
         char **words = parseNew(input, "&");
@@ -166,7 +172,15 @@ void doCommands(char **array, int numberOfWords, int isExec, char *input) {
         i = 0;
     }
 
-    //p1.sh&p2.sh&p3.sh and p1.sh & p2.sh & p3.sh are the same when entering this if block
+    /**
+     * Parallelization: Handles when the user inputs parallel commands separated by "&" or
+     * when the commands are separated in the "if" block above. This if block will record
+     * each word in the command until it finds the "&" symbol. When found, the current list
+     * of strings will be placed in a char *** variable, pointing to a list of list of strings
+     *
+     * Limitation: Only able to handle 3 commands at most. Can be increased by making
+     * listArgs larger and adding more char ** lists.
+     */
     if (contains(array, "&") == TRUE && strcmp(array[0], "&") != 0) {
 
         pthread_t test[3];
@@ -206,13 +220,6 @@ void doCommands(char **array, int numberOfWords, int isExec, char *input) {
 
         pid_t forks[3];
 
-//        for(int t = 0; t < 3; t++){
-//            for(int y = 0; y < 5; y++){
-//                printf("%s ", listArgs[t][y]);
-//            }
-//            printf("\n");
-//        }
-
         for (int t = 0; t < tempNumForks; t++) {
             if(fork() == 0){
                 doCommands(listArgs[t], numberOfWords, TRUE, NULL);
@@ -229,7 +236,13 @@ void doCommands(char **array, int numberOfWords, int isExec, char *input) {
     }
 
 
-
+    /**
+     * Redirection: This "if" block handles when the user wants to redirect output
+     * by using the ">" symbol. The if block will separate any commands where the user
+     * doesn't separate the command, ">", and destination with a space. Once the command
+     * is separated, a variable will be set to TRUE and the ">" and destination in array[]
+     * will become null to support execv properly
+     */
     if (array[1] != NULL && containsChar(array[1], '>') == TRUE && whereChar(array[1], '>') != strlen(array[1]) &&
         contains(array, ">") == FALSE) {
         int loc = whereChar(array[1], '>');
@@ -267,6 +280,15 @@ void doCommands(char **array, int numberOfWords, int isExec, char *input) {
         pass = FALSE;
     }
 
+    /**
+     * This if block handles all user commands including "&" and ">". If a command
+     * is not a built in command (see README), the program will send the array
+     * containing the command and arguments to the else block where
+     * running external executables will be possible. Wish will check all
+     * path variables and determine if the command is found. If it is, wish will
+     * create a child process and run the executable. If not, wish will write an
+     * error to Standard Error and continue to the next line.
+     */
     if (parallel == TRUE) {
         
     } else if (pass == FALSE) {
@@ -318,6 +340,13 @@ void doCommands(char **array, int numberOfWords, int isExec, char *input) {
             if (access(temp, X_OK) == 0) {
 
                 if (fork() == 0) {
+                    /**
+                     * if the ">" character is found in the command and the command
+                     * is found in one of the possible paths, wish will redirect output
+                     * from STDOUT to a file descriptor pointing to the file provided.
+                     * If the file is not found, wish will create a new file and output
+                     * there. If the file is found, will simply open the file and write to it.
+                     */
                     if (redirect == TRUE) {
                         int fd = open(destination, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
                         dup2(fd, 1);
@@ -335,7 +364,10 @@ void doCommands(char **array, int numberOfWords, int isExec, char *input) {
             }
             i++;
         }
-
+        /**
+         * if a build in command is not found, nor is the command an executable
+         * found in the possible paths, wish will write and error to STANDARD ERROR.
+         */
         if (success == FALSE) {
             char error_message[30] = "An error has occurred\n";
             write(STDERR_FILENO, error_message, strlen(error_message));
